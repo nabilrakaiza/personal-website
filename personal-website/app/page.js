@@ -1,103 +1,119 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState, useEffect } from 'react';
+
+const NavLink = ({ href, children, active = false }) => (
+  <a
+    href={href}
+    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+      active
+        ? 'bg-gray-700 text-white'
+        : 'text-gray-400 hover:text-white'
+    }`}
+  >
+    {children}
+  </a>
+);
+
+export default function HomePage() {
+  const [role, setRole] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const rolesToRotate = ["Software Engineer", "ML Engineer", "Clash Royale Enjoyer", 
+    "DSA @ NUS", "Rubik Cube Solver", "Sleep All The Time", "Love Chicken", "Searching an internship..."];
+
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % rolesToRotate.length;
+      const fullText = rolesToRotate[i];
+
+      // Set the new text based on whether we are deleting or typing
+      setRole(isDeleting ? fullText.substring(0, role.length - 1) : fullText.substring(0, role.length + 1));
+
+      // Adjust typing speed
+      setTypingSpeed(isDeleting ? 75 : 150);
+
+      // If text is fully typed, pause, then start deleting
+      if (!isDeleting && role === fullText) {
+        setTimeout(() => setIsDeleting(true), 1500);
+      } 
+      // If text is fully deleted, move to the next role
+      else if (isDeleting && role === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const ticker = setTimeout(handleType, typingSpeed);
+
+    return () => clearTimeout(ticker);
+  }, [role, isDeleting, loopNum, rolesToRotate, typingSpeed]);
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-gray-900 min-h-screen text-white font-sans">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <header className="flex justify-between items-center py-6">
+          <div className="bg-gray-800 px-6 py-3 rounded-full">
+            <h1 className="text-md font-medium">Nabil Rakaiza Abror</h1>
+          </div>
+          <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
+            <NavLink href="#" active>
+              Home
+            </NavLink>
+            <NavLink href="#">Projects</NavLink>
+            <NavLink href="#">Blogs</NavLink>
+            <NavLink href="#">All About Me!</NavLink>
+          </nav>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* Main Content */}
+        <main className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32">
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+              Hi! I'm Nabil
+            </h2>
+            <h3 className="text-5xl md:text-6xl font-bold text-gray-400 mt-2 h-20 md:h-24 whitespace-nowrap">
+              <span className="border-r-4 border-gray-400 pr-1 animate-pulse">{role}</span>
+            </h3>
+            <p className="text-gray-400 max-w-lg mx-auto md:mx-0">
+              I'm an undergraduate at National University of Singapore
+              majoring in Data Science and Analytics with second major in
+              Computer Science. I like to do ML/AI stuff and some software
+              things too!
+            </p>
+            <div className="mt-8 flex justify-center md:justify-start space-x-4">
+              <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                Project
+              </button>
+              <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                Blogs
+              </button>
+              <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                About Me
+              </button>
+            </div>
+          </div>
+
+          <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center ml-20">
+            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 relative">
+              <img
+                src="./foto-saya.png"
+                alt="Nabil Rakaiza Abror"
+                className="rounded-full object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="text-center text-gray-500 py-8">
+          <p>&copy; 2025 Nabil Rakaiza Abror.</p>
+        </footer>
+      </div>
     </div>
   );
 }
+
