@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 
-const NavLink = ({ href, children, active = false }) => (
+const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm font-medium transition-colors", active = false }) => (
   <a
     href={href}
-    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+    className={`${className} ${
       active
         ? 'bg-gray-700 text-white'
         : 'text-gray-400 hover:text-white'
@@ -56,16 +56,16 @@ export default function HomePage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="flex justify-between items-center py-6">
-          <button className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
+          <NavLink href="projects" className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
             <h1 className="text-md font-medium ">Nabil Rakaiza Abror</h1>
-          </button>
+          </NavLink>
           <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
-            <NavLink href="#" active>
+            <NavLink href="/" active>
               Home
             </NavLink>
-            <NavLink href="#">Projects</NavLink>
-            <NavLink href="#">Blogs</NavLink>
-            <NavLink href="#">All About Me!</NavLink>
+            <NavLink href="projects">Projects</NavLink>
+            <NavLink href="blogs">Blogs</NavLink>
+            <NavLink href="about-me">All About Me!</NavLink>
           </nav>
         </header>
 
@@ -85,15 +85,15 @@ export default function HomePage() {
               things too!
             </p>
             <div className="mt-8 flex justify-center md:justify-start space-x-4">
-              <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+              <NavLink href="projects" className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
                 Project
-              </button>
-              <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+              </NavLink>
+              <NavLink href="blogs" className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
                 Blogs
-              </button>
-              <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+              </NavLink>
+              <NavLink href="about-me" className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
                 About Me
-              </button>
+              </NavLink>
             </div>
           </div>
 

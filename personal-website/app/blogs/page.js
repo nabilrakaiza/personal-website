@@ -1,17 +1,17 @@
 // import { useState, useEffect } from 'react';
 
-const NavLink = ({ href, children, active = false }) => (
-    <a
-      href={href}
-      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-        active
-          ? 'bg-gray-700 text-white'
-          : 'text-gray-400 hover:text-white'
-      }`}
-    >
-      {children}
-    </a>
-  );
+const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm font-medium transition-colors", active = false }) => (
+  <a
+    href={href}
+    className={`${className} ${
+      active
+        ? 'bg-gray-700 text-white'
+        : 'text-gray-400 hover:text-white'
+    }`}
+  >
+    {children}
+  </a>
+);
   
   export default function BlogsPage() {
     return (
@@ -19,16 +19,16 @@ const NavLink = ({ href, children, active = false }) => (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <header className="flex justify-between items-center py-6">
-            <button className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
+            <NavLink href="projects" className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
               <h1 className="text-md font-medium ">Nabil Rakaiza Abror</h1>
-            </button>
+            </NavLink>
             <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
-              <NavLink href="#">
+              <NavLink href="/">
                 Home
               </NavLink>
-              <NavLink href="#">Projects</NavLink>
-              <NavLink href="#" active>Blogs</NavLink>
-              <NavLink href="#">All About Me!</NavLink>
+              <NavLink href="/projects">Projects</NavLink>
+              <NavLink href="/blogs" active>Blogs</NavLink>
+              <NavLink href="/about-me">All About Me!</NavLink>
             </nav>
           </header>
 
