@@ -1,6 +1,7 @@
 // "use client";
 
 // import { useState, useEffect } from 'react';
+import Link from "next/link";
 
 const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm font-medium transition-colors", active = false }) => (
     <a
@@ -20,20 +21,6 @@ export default function HomePage() {
   return (
     <div className="bg-gray-900 min-h-screen text-white font-sans">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <header className="flex justify-between items-center py-6">
-          <NavLink href="projects" className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
-            <h1 className="text-md font-medium ">Nabil Rakaiza Abror</h1>
-          </NavLink>
-          <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
-            <NavLink href="/">
-              Home
-            </NavLink>
-            <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/blogs">Blogs</NavLink>
-            <NavLink href="/about-me" active>All About Me!</NavLink>
-          </nav>
-        </header>
 
         {/* Main Content */}
         <main className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32">
@@ -55,7 +42,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
             Education
           </h2>
         <main className="flex flex-col md:flex-row items-center gap-15 pb-20 ml-10">
-        <div className="h-120 w-1 bg-gray-300 mt-20" />
+        <div className="h-120 w-1 bg-amber-300 mt-20" />
         <div className="md:w-1/2 text-center md:text-left"> 
             
             <div className='flex items-center w-full gap-10 my-20'> 
@@ -101,7 +88,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
             Experiences
           </h2>
         <main className="flex flex-col md:flex-row items-center gap-15 pb-20 ml-10">
-        <div className="h-200 w-1 bg-gray-300 mt-20" />
+        <div className="h-200 w-1 bg-amber-300 mt-20" />
         <div className="md:w-1/2 text-center md:text-left"> 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
@@ -166,12 +153,30 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
             Contact Me!
         </h2>
         <div className='flex flex-row bg-amber-300 items-center justify-between pl-20 pr-20 md:py-12 rounded-3xl my-10'>
-            <img src = "./mail-logo.png" alt="mail Logo" className="w-20 h-20 mb-4"/>
-            <img src = "./ig-logo.png" alt="mail Logo" className="w-20 h-20 mb-4"/>
-            <img src = "./twitter-logo.png" alt="mail Logo" className="w-20 h-20 mb-4"/>
-            <img src = "./linkedin-logo.png" alt="mail Logo" className="w-20 h-20 mb-4"/>
-            <img src = "./github-logo.svg" alt="mail Logo" className="w-20 h-20 mb-4"/>
-            <img src = "./youtube-logo.webp" alt="mail Logo" className="w-20 h-20 mb-4"/>
+
+            <a href="mailto:nabilrakaiza@example.com" rel="noopener noreferrer" target="_blank">
+            <img src="./mail-logo.png" alt="Email Logo" className="w-20 h-20 mb-4"/>
+            </a>
+
+            <a href="https://www.instagram.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
+            <img src="./ig-logo.png" alt="Instagram Logo" className="w-20 h-20 mb-4"/>
+            </a>
+
+            <a href="https://www.twitter.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
+            <img src="./twitter-logo.png" alt="Twitter Logo" className="w-20 h-20 mb-4"/>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nabilrakaiza" rel="noopener noreferrer" target="_blank">
+            <img src="./linkedin-logo.png" alt="LinkedIn Logo" className="w-20 h-20 mb-4"/>
+            </a>
+
+            <a href="https://github.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
+            <img src="./github-logo.svg" alt="GitHub Logo" className="w-20 h-20 mb-4"/>
+            </a>
+
+            <a href="https://www.youtube.com/@papeeerrr" rel="noopener noreferrer" target="_blank">
+            <img src="./youtube-logo.webp" alt="YouTube Logo" className="w-20 h-20 mb-4"/>
+            </a>
         </div>
 
         <div className="w-full h-px bg-gray-300 my-20" /> 

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./components/ui/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,8 +11,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata = {
+ 
+export const metadata = { 
   title: "Nabil Rakaiza Abror",
   description: "Nabil Rakaiza Abror's Personal Website",
 };
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
+        <Header /> 
         {children}
       </body>
     </html>

@@ -53,22 +53,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-gray-900 min-h-screen text-white font-sans">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <header className="flex justify-between items-center py-6">
-          <NavLink href="projects" className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
-            <h1 className="text-md font-medium ">Nabil Rakaiza Abror</h1>
-          </NavLink>
-          <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
-            <NavLink href="/" active>
-              Home
-            </NavLink>
-            <NavLink href="projects">Projects</NavLink>
-            <NavLink href="blogs">Blogs</NavLink>
-            <NavLink href="about-me">All About Me!</NavLink>
-          </nav>
-        </header>
-
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">        
         {/* Main Content */}
         <main className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32">
           <div className="md:w-1/2 text-center md:text-left">

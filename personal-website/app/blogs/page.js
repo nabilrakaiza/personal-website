@@ -17,22 +17,7 @@ const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm f
     return (
       <div className="bg-gray-900 min-h-screen text-white font-sans">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <header className="flex justify-between items-center py-6">
-            <NavLink href="projects" className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
-              <h1 className="text-md font-medium ">Nabil Rakaiza Abror</h1>
-            </NavLink>
-            <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
-              <NavLink href="/">
-                Home
-              </NavLink>
-              <NavLink href="/projects">Projects</NavLink>
-              <NavLink href="/blogs" active>Blogs</NavLink>
-              <NavLink href="/about-me">All About Me!</NavLink>
-            </nav>
-          </header>
-
-          <p className="mt-5 text-center text-white mb-8 text-2xl"><b>My blogs</b> (<i>I dont write that much, but here it is</i>)</p>
+          <p className="text-center text-white mb-8 text-2xl"><b>My blogs</b> (<i>I dont write that much, but here it is</i>)</p>
             {/* Main Content */}
             <main className="py-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

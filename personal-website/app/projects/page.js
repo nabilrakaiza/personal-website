@@ -9,7 +9,7 @@ const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm f
         : 'text-gray-400 hover:text-white'
     }`}
   >
-    {children}
+    {children} 
   </a>
 );
 
@@ -17,20 +17,6 @@ export default function ProjectPage() {
   return (
     <div className="bg-gray-900 min-h-screen text-white font-sans">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <header className="flex justify-between items-center py-6">
-          <NavLink href="projects" className="bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
-            <h1 className="text-md font-medium ">Nabil Rakaiza Abror</h1>
-          </NavLink>
-          <nav className="bg-gray-800 px-4 py-2 rounded-full flex items-center space-x-2">
-            <NavLink href="/">
-              Home
-            </NavLink>
-            <NavLink href="/projects" active>Projects</NavLink>
-            <NavLink href="/blogs">Blogs</NavLink>
-            <NavLink href="/about-me">All About Me!</NavLink>
-          </nav>
-        </header>
 
         {/* Main Content */}
         <main className="py-12">
