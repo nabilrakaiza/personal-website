@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 
 const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm font-medium transition-colors", active = false }) => (
   <a
@@ -58,13 +59,13 @@ export default function HomePage() {
         <main className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32">
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-              Hi! I'm Nabil
+              Hi! I&apos;m Nabil
             </h2>
             <h3 className="text-5xl md:text-6xl font-bold text-gray-400 mt-2 h-20 md:h-24 whitespace-nowrap">
               <span className="border-r-4 border-gray-400 pr-1 animate-pulse">{role}</span>
             </h3>
             <p className="text-gray-400 max-w-lg mx-auto md:mx-0">
-              I'm an undergraduate at National University of Singapore
+              I&apos;m an undergraduate at National University of Singapore
               majoring in Data Science and Analytics with second major in
               Computer Science. I like to do ML/AI stuff and some software
               things too!
@@ -84,8 +85,10 @@ export default function HomePage() {
 
           <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center ml-20">
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 relative">
-              <img
-                src="./foto-saya.png"
+              <Image
+                width={1000}
+                height={1000}
+                src="/./foto-saya.png"
                 alt="Nabil Rakaiza Abror"
                 className="rounded-full object-cover w-full h-full"
               />

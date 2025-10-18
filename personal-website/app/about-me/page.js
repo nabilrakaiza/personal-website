@@ -2,6 +2,7 @@
 
 // import { useState, useEffect } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 
 const NavLink = ({ href, children, className = "px-4 py-2 rounded-full text-sm font-medium transition-colors", active = false }) => (
     <a
@@ -47,7 +48,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
             
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./nus-logo.png" alt="NUS Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./nus-logo.png" alt="NUS Logo" className="object-cover"/>
                 </div>
                 
                 <div className="flex-1 min-w-300 ">
@@ -59,7 +60,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./ui-logo.png" alt="UI Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./ui-logo.png" alt="UI Logo" className="object-cover"/>
                 </div>
                 
                 <div className="flex-1 min-w-300 ">
@@ -71,7 +72,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 mt-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./pd-logo.png" alt="PD Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./pd-logo.png" alt="PD Logo" className="object-cover"/>
                 </div>
                 
                 <div className="flex-1 min-w-300 ">
@@ -92,7 +93,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
         <div className="md:w-1/2 text-center md:text-left"> 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./pinus-logo.png" alt="PINUS Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./pinus-logo.png" alt="PINUS Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>Perhimpunan Indonesia NUS (PINUS)</p>
@@ -103,7 +104,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./nuansa-logo.png" alt="NUANSA Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./nuansa-logo.png" alt="NUANSA Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>NUANSA Cultural Production</p>
@@ -114,7 +115,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./quantum-logo.png" alt="Quantum Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./quantum-logo.png" alt="Quantum Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>Quantum Teknologi Nusantara</p>
@@ -125,7 +126,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./cf-logo.png" alt="COMPFEST 16 Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./cf-logo.png" alt="COMPFEST 16 Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>COMPFEST 16</p>
@@ -136,7 +137,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 mt-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <img src = "./betis-logo.png" alt="BETIS Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/./betis-logo.png" alt="BETIS Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>BETIS Fasilkom UI</p>
@@ -155,27 +156,27 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
         <div className='flex flex-row bg-amber-300 items-center justify-between pl-20 pr-20 md:py-12 rounded-3xl my-10'>
 
             <a href="mailto:nabilrakaiza@example.com" rel="noopener noreferrer" target="_blank">
-            <img src="./mail-logo.png" alt="Email Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/./mail-logo.png" alt="Email Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.instagram.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <img src="./ig-logo.png" alt="Instagram Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/./ig-logo.png" alt="Instagram Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.twitter.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <img src="./twitter-logo.png" alt="Twitter Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/./twitter-logo.png" alt="Twitter Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.linkedin.com/in/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <img src="./linkedin-logo.png" alt="LinkedIn Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/./linkedin-logo.png" alt="LinkedIn Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://github.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <img src="./github-logo.svg" alt="GitHub Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/./github-logo.svg" alt="GitHub Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.youtube.com/@papeeerrr" rel="noopener noreferrer" target="_blank">
-            <img src="./youtube-logo.webp" alt="YouTube Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/./youtube-logo.webp" alt="YouTube Logo" className="w-20 h-20 mb-4"/>
             </a>
         </div>
 
@@ -183,7 +184,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">
             Leave me a message!
         </h2>
-        <p className='my-5 text-xl'>Sender (keep empty if u want it to be anonymous)</p>
+        <p className='my-5 text-xl'>Sender (keep empty if u want it to be anonymous) (for future update, still not working)</p>
         <input type="text" className="bg-amber-200 w-full p-3 rounded-lg mb-4 text-black" placeholder="Your Name"/>
         <p className='my-5 text-xl'>Your message</p>
         <textarea className="bg-amber-200 w-full p-3 rounded-lg mb-4 text-black" rows="4" placeholder="Your Message"></textarea>
