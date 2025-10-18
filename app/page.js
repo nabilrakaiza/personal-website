@@ -88,7 +88,7 @@ export default function HomePage() {
               <Image
                 width={1000}
                 height={1000}
-                src="/./foto-saya.png"
+                src="/foto-saya.png"
                 alt="Nabil Rakaiza Abror"
                 className="rounded-full object-cover w-full h-full"
               />

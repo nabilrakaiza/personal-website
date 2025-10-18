@@ -48,7 +48,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
             
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./nus-logo.png" alt="NUS Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/nus-logo.png" alt="NUS Logo" className="object-cover"/>
                 </div>
                 
                 <div className="flex-1 min-w-300 ">
@@ -60,7 +60,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./ui-logo.png" alt="UI Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/ui-logo.png" alt="UI Logo" className="object-cover"/>
                 </div>
                 
                 <div className="flex-1 min-w-300 ">
@@ -72,7 +72,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 mt-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./pd-logo.png" alt="PD Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/pd-logo.png" alt="PD Logo" className="object-cover"/>
                 </div>
                 
                 <div className="flex-1 min-w-300 ">
@@ -93,7 +93,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
         <div className="md:w-1/2 text-center md:text-left"> 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./pinus-logo.png" alt="PINUS Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/pinus-logo.png" alt="PINUS Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>Perhimpunan Indonesia NUS (PINUS)</p>
@@ -104,7 +104,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./nuansa-logo.png" alt="NUANSA Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/nuansa-logo.png" alt="NUANSA Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>NUANSA Cultural Production</p>
@@ -115,7 +115,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./quantum-logo.png" alt="Quantum Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/quantum-logo.png" alt="Quantum Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>Quantum Teknologi Nusantara</p>
@@ -126,7 +126,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./cf-logo.png" alt="COMPFEST 16 Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/cf-logo.png" alt="COMPFEST 16 Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>COMPFEST 16</p>
@@ -137,7 +137,7 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
 
             <div className='flex items-center w-full gap-10 mt-20'> 
                 <div className="flex-shrink-0 w-32">
-                    <Image width = {100} height = {100} src = "/./betis-logo.png" alt="BETIS Logo" className="object-cover"/>
+                    <Image width = {100} height = {100} src = "/betis-logo.png" alt="BETIS Logo" className="object-cover"/>
                 </div>
                 <div className="flex-1 min-w-300 ">
                     <p className='text-2xl font-bold'>BETIS Fasilkom UI</p>
@@ -156,27 +156,27 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
         <div className='flex flex-row bg-amber-300 items-center justify-between pl-20 pr-20 md:py-12 rounded-3xl my-10'>
 
             <a href="mailto:nabilrakaiza@example.com" rel="noopener noreferrer" target="_blank">
-            <Image width = {100} height = {100} src="/./mail-logo.png" alt="Email Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/mail-logo.png" alt="Email Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.instagram.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <Image width = {100} height = {100} src="/./ig-logo.png" alt="Instagram Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/ig-logo.png" alt="Instagram Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.twitter.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <Image width = {100} height = {100} src="/./twitter-logo.png" alt="Twitter Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/twitter-logo.png" alt="Twitter Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.linkedin.com/in/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <Image width = {100} height = {100} src="/./linkedin-logo.png" alt="LinkedIn Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/linkedin-logo.png" alt="LinkedIn Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://github.com/nabilrakaiza" rel="noopener noreferrer" target="_blank">
-            <Image width = {100} height = {100} src="/./github-logo.svg" alt="GitHub Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/github-logo.svg" alt="GitHub Logo" className="w-20 h-20 mb-4"/>
             </a>
 
             <a href="https://www.youtube.com/@papeeerrr" rel="noopener noreferrer" target="_blank">
-            <Image width = {100} height = {100} src="/./youtube-logo.webp" alt="YouTube Logo" className="w-20 h-20 mb-4"/>
+            <Image width = {100} height = {100} src="/youtube-logo.webp" alt="YouTube Logo" className="w-20 h-20 mb-4"/>
             </a>
         </div>
 
