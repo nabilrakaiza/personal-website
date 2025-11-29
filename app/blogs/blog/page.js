@@ -72,7 +72,7 @@ Expected Grade: A
 
 IT1244
 
-I also love this module. Some of the algorithms are actually taught in other courses, like DSA1101 (KNN, Kmeans, Linear Regression, Logistic Regression, etc) and CS2040 (DFS, BFS). So I was able to grasp the content quite quickly, and I think I can score well for this course. Some tips I want to share are: pls take this module with your friends if you don’t want teammates who aren't good enough. 
+I also love this module. Some of the algorithms are actually taught in other courses, like DSA1101 (KNN, Kmeans, Linear Regression, Logistic Regression, etc) and CS2040 (DFS, BFS). So I was able to grasp the content quite quickly, and I think I can score well for this course. Some tips I want to share are: pls take this module with your friends if you don&apos;t want teammates who aren&apos;t good enough. 
 
 Expected Grade: A-/A
 

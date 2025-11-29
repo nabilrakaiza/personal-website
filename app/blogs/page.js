@@ -16,7 +16,6 @@ export const blogPosts = [
     title: "Y1S1 Module Review!",
     date: "December 2024",
     summary: "In this sem, I took CS1010S, MA2001, MA2002, HSH1000, HSI1000, CFG1002. Click to read more about my review!",
-    content: "Here is the full long text for Y1S1..."
   }
 ];
 

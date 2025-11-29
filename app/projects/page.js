@@ -1,4 +1,4 @@
-// import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react'
 import Image from "next/image";
 
 export default function ProjectPage() {
@@ -54,7 +54,7 @@ export default function ProjectPage() {
               <Image width = {100} height = {100} src = "/web-dev.png" alt="Project Image" className="w-full h-36 object-cover rounded-4xl mb-4"/>
               <h3 className="text-2xl font-semibold mb-2 text-black">Personal Website</h3>
               <h3 className="text-xl font-semibold mb-2 text-black">Web Development</h3>
-              <p className="text-black mb-4">Well, this is the website that you're looking for.</p>
+              <p className="text-black mb-4">Well, this is the website that you&apos;re looking for.</p>
               <div className="flex w-full gap-4">
                 <a href="https://github.com/nabilrakaiza/personal-website" rel="noopener noreferrer" target="_blank">
                   <Image width = {100} height = {100} src = "/github-logo.svg" alt="Github Logo" className="w-6 h-6 mb-4" />
@@ -102,7 +102,7 @@ export default function ProjectPage() {
               <Image width = {100} height = {100} src = "/kaggle.png" alt="Project Image" className="w-full h-36 object-cover rounded-4xl mb-4"/>
               <h3 className="text-2xl font-semibold mb-2 text-black">Machine Learning Competition</h3>
               <h3 className="text-xl font-semibold mb-2 text-black">Machine Learning</h3>
-              <p className="text-black mb-4">Doing lots of fun competition in Kaggle and university competitons. But I don't document the code properly :( So here's my kaggle account!</p>
+              <p className="text-black mb-4">Doing lots of fun competition in Kaggle and university competitons. But I don&apos;t document the code properly :( So here&apos;s my kaggle account!</p>
               <div className="flex w-full gap-4">
                 <a href="https://www.kaggle.com/nabilrakaizaabror" rel="noopener noreferrer" target="_blank">
                   <Image width = {100} height = {100} src = "/Book open.png" alt="Doc Logo" className="w-6 h-6 mb-4" />
@@ -115,7 +115,7 @@ export default function ProjectPage() {
               <Image width = {100} height = {100} src = "/leetcode.png" alt="Project Image" className="w-full h-36 object-cover rounded-4xl mb-4"/>
               <h3 className="text-2xl font-semibold mb-2 text-black">DSA Practice</h3>
               <h3 className="text-xl font-semibold mb-2 text-black">Data Structure and Algorithm</h3>
-              <p className="text-black mb-4">I usually do leetcode in my free time. so check my account below (yeah i know i'm still a noob)</p>
+              <p className="text-black mb-4">I usually do leetcode in my free time. so check my account below (yeah i know i&apos;m still a noob)</p>
               <div className="flex w-full gap-4">
                 <a href="https://leetcode.com/u/nabilrakaiza/" rel="noopener noreferrer" target="_blank">
                   <Image width = {100} height = {100} src = "/Book open.png" alt="Doc Logo" className="w-6 h-6 mb-4" />
