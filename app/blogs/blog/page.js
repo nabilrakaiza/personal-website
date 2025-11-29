@@ -2,8 +2,8 @@ import React from "react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from "remark-gfm";
 
-export default function BlogPage({searchParams}) {
-  const id = searchParams.id;
+export default async function BlogPage({searchParams}) {
+  const id = await searchParams.id;
   const content = blogContents[id]["content"]
   const title = blogContents[id]["title"]
 
