@@ -89,7 +89,7 @@ Expected Grade: C (S)
   "y1s2-review" : {
     "title": "Y1S2 Module Review",
     "content": `
-    CS1231
+CS1231
 
 I find this module to be enjoyable as I can brush up my knowledge on discrete math again. However, the grading of this module is purely based on assessment, so please do your assessment carefully. 
 
@@ -148,7 +148,7 @@ Final Grade: S
   "y1s1-review" : {
     "title": "Y1S1 Module Review",
     "content": `
-    CS1010S
+CS1010S
 
 I feel very confident for this module since I have a background in python. However, if you don’t have any background before, this mod might be very hard for you, and you might want to take this with easier mods. 
 
