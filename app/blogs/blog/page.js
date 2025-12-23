@@ -44,6 +44,8 @@ I like this module a lot, even though it might be difficult for some of you. I e
 
 Expected Grade: A-/A
 
+Final Grade: A+ (I guess I didn't do that badly in finals)
+
 ----------------------------------------------------------------    
 
 CS2030
@@ -51,6 +53,8 @@ CS2030
 For the first half of this module, I was doing just fine. But suddenly, somehow, I managed to throw everything. The module was taught great, but I think it was more about me who doesn’t really like the course itself (I prefer to do algo problems than designing pipelines). 
 
 Expected Grade: B/B+
+
+Final Grade: B+ (very grateful considering how I did for both PA 2 and finals)
 
 ----------------------------------------------------------------    
 
@@ -60,6 +64,8 @@ Even though most of the time you spent on this module is plotting graph, I find 
 
 Expected Grade: A-
 
+Final Grade: A- (steep bell curve as expected)
+
 ----------------------------------------------------------------    
 
 DSA2102
@@ -67,6 +73,8 @@ DSA2102
 I love this module so much, especially the first half of the module. You will learn how computers do calculations and what their limitations are. In the end, I think I should be able to score well since I got near high for the midterm and feel confident for finals. 
 
 Expected Grade: A
+
+Final Grade: A
 
 ----------------------------------------------------------------    
 
@@ -76,6 +84,8 @@ I also love this module. Some of the algorithms are actually taught in other cou
 
 Expected Grade: A-/A
 
+Final Grade: A+
+
 ----------------------------------------------------------------    
 
 SP1541
@@ -83,6 +93,8 @@ SP1541
 Well, I have a love-hate relationship with this mod. There are no statistics at all, so I can’t compare myself with the other cohorts. Other than that, the grading is quite subjective, so you can get a poor grade if you are unlucky. I also somehow never got > 70 for any assessment other than a quiz (which is basically also a free mark for everyone). But, the class activities were fun, and I like going to the science centre also. 
 
 Expected Grade: C (S)
+
+Final Grade: B (planning to SU)
 `
   },
   
