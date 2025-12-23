@@ -44,7 +44,7 @@ I like this module a lot, even though it might be difficult for some of you. I e
 
 Expected Grade: A-/A
 
-Final Grade: A+ (I guess I didn't do that badly in finals)
+Final Grade: A+ (I guess I didn’t do that badly in finals)
 
 ----------------------------------------------------------------    
 
