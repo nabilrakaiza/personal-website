@@ -89,8 +89,19 @@ In my free time, I usually like to play rubik cube (especially the 3x3 one), wat
             Experiences
           </h2>
         <main className="flex flex-col md:flex-row items-center gap-15 pb-20 ml-10">
-        <div className="h-200 w-1 bg-amber-300 mt-20" />
+        <div className="h-220 w-1 bg-amber-300 mt-20" />
         <div className="md:w-1/2 text-center md:text-left"> 
+            <div className='flex items-center w-full gap-10 my-20'> 
+                <div className="flex-shrink-0 w-32">
+                    <Image width = {100} height = {100} src = "/nus-computing.png" alt="NUS Computing Logo" className="object-cover"/>
+                </div>
+                <div className="flex-1 min-w-300 ">
+                    <p className='text-2xl font-bold'>NUS Computing</p>
+                    <p className='text-xl italic'>Teaching Assistant</p>
+                    <p>January 2026 - Present</p>
+                </div>
+            </div>
+            
             <div className='flex items-center w-full gap-10 my-20'> 
                 <div className="flex-shrink-0 w-32">
                     <Image width = {100} height = {100} src = "/pinus-logo.png" alt="PINUS Logo" className="object-cover"/>

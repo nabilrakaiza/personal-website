@@ -9,8 +9,43 @@ export default function ProjectPage() {
         {/* Main Content */}
         <main className="py-12">
 
+          {/* 2026 Projects */}
+          <h2 className="text-3xl font-bold">2026</h2>
+          <div className="w-full h-px bg-gray-300 my-4" /> 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Automatic Survey Analyzer */}
+            <div className="bg-amber-300 p-6 rounded-4xl hover:shadow-lg transition-shadow">
+              <Image width = {100} height = {100} src = "/ml-image.webp" alt="Project Image" className="w-full h-36 object-cover rounded-4xl mb-4"/>
+              <h3 className="text-2xl font-semibold mb-2 text-black">Automatic Survey Analyzer</h3>
+              <h3 className="text-xl font-semibold mb-2 text-black">Machine Learning</h3>
+              <p className="text-black mb-4">Prototype to help companies analyze survey responses, improve survey design, and generate actionable insights.</p>
+              <div className="flex w-full gap-4">
+                <a href="https://github.com/nabilrakaiza/automatic-survey-analyzer" rel="noopener noreferrer" target="_blank">
+                  <Image width = {100} height = {100} src = "/github-logo.svg" alt="Github Logo" className="w-6 h-6 mb-4" />
+                </a>
+                <a href="https://docs.google.com/document/d/1bR-rovd3id2xVwrs4lwcII7C2LHKI7Sz-sSprjfme0E/edit?usp=sharing" rel="noopener noreferrer" target="_blank">
+                  <Image width = {100} height = {100} src = "/Book open.png" alt="Doc Logo" className="w-6 h-6 mb-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Started a codeforces account */}
+            <div className="bg-amber-300 p-6 rounded-4xl hover:shadow-lg transition-shadow">
+              <Image width = {100} height = {100} src = "/cf_logo.jpeg" alt="Project Image" className="w-full h-36 object-cover rounded-4xl mb-4"/>
+              <h3 className="text-2xl font-semibold mb-2 text-black">Codeforces Account</h3>
+              <h3 className="text-xl font-semibold mb-2 text-black">Competitive Programming</h3>
+              <p className="text-black mb-4">Started a cf account! still a newbie though</p>
+              <div className="flex w-full gap-4">
+                <a href="https://codeforces.com/profile/nabilrakaiza" rel="noopener noreferrer" target="_blank">
+                  <Image width = {100} height = {100} src = "/Book open.png" alt="Doc Logo" className="w-6 h-6 mb-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* 2025 Projects */}
-          <h2 className="text-3xl font-bold">2025</h2>
+          <h2 className="text-3xl font-bold mt-10">2025</h2>
           <div className="w-full h-px bg-gray-300 my-4" /> 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -87,6 +122,19 @@ export default function ProjectPage() {
                 </a>
                 <a href="https://github.com/nabilrakaiza/dsa1101-individual-project/blob/main/DSA1101%20Statistical%20Report.pdf" rel="noopener noreferrer" target="_blank">
                   <Image width = {100} height = {100} src = "/Book open.png" alt="Doc Logo" className="w-6 h-6 mb-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* DSA2101 Group Assignment */}
+            <div className="bg-amber-300 p-6 rounded-4xl hover:shadow-lg transition-shadow">
+              <Image width = {100} height = {100} src = "/ml-image.webp" alt="Project Image" className="w-full h-36 object-cover rounded-4xl mb-4"/>
+              <h3 className="text-2xl font-semibold mb-2 text-black">Color Survey Result Analysis</h3>
+              <h3 className="text-xl font-semibold mb-2 text-black">Data Visualization</h3>
+              <p className="text-black mb-4">Visualized insights from color survey result data.</p>
+              <div className="flex w-full gap-4">
+                <a href="https://github.com/nabilrakaiza/color-survey-results-analysis" rel="noopener noreferrer" target="_blank">
+                  <Image width = {100} height = {100} src = "/github-logo.svg" alt="Github Logo" className="w-6 h-6 mb-4" />
                 </a>
               </div>
             </div>
