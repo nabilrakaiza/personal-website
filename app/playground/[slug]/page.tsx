@@ -8,7 +8,7 @@ const tools: Record<string, { title: string; description: string; emoji: string;
   'id-en-translator': {
     title: 'Indonesian-English Translation Machine',
     description: 'A from-scratch implementation of an Indonesian-to-English translation machine.',
-    emoji: '🔍',
+    emoji: '🌐',
     accent: '#00ff9d',
     component: <IDENTranslation />,
   },

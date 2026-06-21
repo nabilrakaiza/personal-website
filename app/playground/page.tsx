@@ -12,7 +12,7 @@ const playgroundItems = [
     description: 'A from-scratch implementation of an Indonesian-to-English translation machine.',
     tags: ['Python', 'Machine Learning', 'NLP', 'PyTorch'],
     accent: '#ff6b6b',
-    emoji: '🔍',
+    emoji: '🌐',
   },
   {
     slug: 'fairy-chess-machine',
