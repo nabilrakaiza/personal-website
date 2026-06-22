@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { RiExternalLinkLine, RiGithubLine } from 'react-icons/ri';
 
 const projects = [
-  { title: '[upcoming] Indo-English Translation Machine', description: 'A mini Indonesian-English translation machine built from scratch.', tags: ['Python', 'PyTorch', 'NLP', 'AI'], github: 'https://github.com/nabilrakaiza/id-en-translator', live: '/playground/id-en-translator', accent: '#ff6b6b'},
+  { title: 'Indo-English Translation Machine', description: 'A mini Indonesian-English translation machine built from scratch.', tags: ['Python', 'PyTorch', 'Transformer', 'BPE Tokenizer', 'NLP', 'AI'], github: 'https://github.com/nabilrakaiza/id-en-translator', live: '/playground/id-en-translator', accent: '#ff6b6b'},
   { title: 'Papper', description: 'Built a cross-platform, multi-role React Native POS system with Supabase and PostgreSQL that automates stock deduction, dual-printer Bluetooth printing, and analytics, actively processing 50+ daily orders and reducing SaaS costs by 100%.', tags: ['React', 'React Native', 'TypeScript', 'PostgreSQL', 'Supabase', 'Expo', 'Tailwind CSS'], github: 'https://github.com/nabilrakaiza/Papper', accent: '#7b61ff' },
   { title: 'Monitoring Human Mobility with Smartphones', description: 'Utilizing several traditional and modern ML framework to solve this problem.', tags: ['Python', 'sklearn', 'Pandas', 'PyTorch', 'Machine Learning'], github: 'https://github.com/NbF5/CS3244-repo', accent: '#00d4ff'},
 ];

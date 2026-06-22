@@ -1,12 +1,24 @@
 'use client';
 
 import ScrollReveal from './ScrollReveal';
-import { RiCodeSSlashLine, RiLightbulbLine, RiTeamLine } from 'react-icons/ri';
+import { RiGraduationCapLine, RiMedalLine, RiBrainLine } from 'react-icons/ri';
 
 const highlights = [
-  { icon: <RiCodeSSlashLine size={20} />, label: '3+ years experience', desc: 'Building production-grade apps and AI models' },
-  { icon: <RiLightbulbLine size={20} />, label: 'Problem-first mindset', desc: 'I design for clarity and function' },
-  { icon: <RiTeamLine size={20} />, label: 'Collaborative', desc: 'Comfortable in cross-functional teams' },
+  {
+    icon: <RiGraduationCapLine size={20} />,
+    label: 'B.Sc. (Hons.) Data Science & Analytics @ NUS',
+    desc: '2nd Major in Computer Science · First Class Honours',
+  },
+  {
+    icon: <RiMedalLine size={20} />,
+    label: 'Academic Excellence',
+    desc: 'Top student in Introduction to Programming & AI/ML coursework',
+  },
+  {
+    icon: <RiBrainLine size={20} />,
+    label: 'Research Interests',
+    desc: 'NLP · LLMs · RAG · AI/ML',
+  },
 ];
 
 export default function AboutShort() {

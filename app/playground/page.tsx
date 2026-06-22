@@ -10,17 +10,15 @@ const playgroundItems = [
     slug: 'id-en-translator',
     title: 'Indonesian-English Translation Machine',
     description: 'A from-scratch implementation of an Indonesian-to-English translation machine.',
-    tags: ['Python', 'Machine Learning', 'NLP', 'PyTorch'],
+    tags: ['Python', 'PyTorch', 'Transformer', 'BPE Tokenizer', 'NLP', 'AI'],
     accent: '#ff6b6b',
-    emoji: '🌐',
   },
   {
     slug: 'fairy-chess-machine',
     title: 'Fairy Chess Machine',
     description: 'Implementation of minimax + alpha-beta pruning to play fairy chess.',
-    tags: ['Python', 'Adversarial Search', 'Algorithm', 'AI'],
+    tags: ['Classical AI', 'Adversarial Search', 'Algorithm', 'AI'],
     accent: '#ff6b6b',
-    emoji: '📋',
   }
 ];
 
@@ -65,8 +63,6 @@ export default function PlaygroundPage() {
                   }}
                 >
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: item.accent, opacity: 0.6 }} />
-
-                  <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{item.emoji}</div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
                     <h3 className="font-mono" style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>

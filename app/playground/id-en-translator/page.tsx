@@ -110,7 +110,6 @@ export default function TranslatorPage() {
             // playground
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-            <span style={{ fontSize: '2rem' }}>🌐</span>
             <h1 className="font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--text-primary)' }}>
               ID → EN Translator
             </h1>
@@ -119,7 +118,7 @@ export default function TranslatorPage() {
             A neural machine translation model I built from scratch. I utilized vanilla Transformer with custom tokenizer (RegexTokenizer from Andrej Karpathy video). It was trained on the Helsinki-NLP/opus-100 dataset. However, since I only use 50K sentences, the translation might not be good. 
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-            {['PyTorch', 'Transformer', 'BPE Tokenizer', 'Gradio', 'Hugging Face'].map(tag => (
+            {['Python', 'PyTorch', 'Transformer', 'BPE Tokenizer', 'NLP', 'AI'].map(tag => (
               <span key={tag} className="font-mono" style={{
                 fontSize: '0.68rem', color: 'var(--accent-violet)',
                 border: '1px solid rgba(123,97,255,0.3)', borderRadius: '3px',
