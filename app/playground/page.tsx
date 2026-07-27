@@ -19,6 +19,13 @@ const playgroundItems = [
     description: 'Implementation of minimax + alpha-beta pruning to play fairy chess.',
     tags: ['Classical AI', 'Adversarial Search', 'Algorithm', 'AI'],
     accent: '#ff6b6b',
+  },
+  {
+    slug: 'socialsim',
+    title: 'social-sim-rag',
+    description: 'A dating sim where nobody is scripted. Characters remember only what they personally witnessed, stored and retrieved from a vector database.',
+    tags: ['RAG', 'pgvector', 'Gemini', 'Supabase', 'TypeScript', 'AI'],
+    accent: '#7b61ff',
   }
 ];
 

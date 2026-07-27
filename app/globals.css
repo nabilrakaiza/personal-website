@@ -13,10 +13,35 @@
   --border: #1e2035;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Tailwind tokens bound to the variables above — `inline` so they resolve
+   against those vars rather than snapshotting values, keeping one source of
+   truth. Added for the socialsim playground page, which is built with Tailwind
+   utilities; the rest of the site styles inline and is unaffected. */
+@theme inline {
+  --color-canvas: var(--bg-primary);
+  --color-surface: var(--bg-surface);
+  --color-card: var(--bg-card);
+  --color-mint: var(--accent-mint);
+  --color-violet: var(--accent-violet);
+  --color-ink: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-line: var(--border);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* In the base layer deliberately. Unlayered rules win over layered ones
+   whatever their specificity, so an unlayered `*` reset overrides every
+   Tailwind padding and margin utility — px-6, mx-auto and the rest stop
+   working with no error. Existing pages are unaffected: they style inline,
+   which beats layers regardless. */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 body {
