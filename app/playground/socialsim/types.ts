@@ -44,12 +44,23 @@ export interface ResolvedSegment {
   eventLogId?: string;
 }
 
+// Enough of an extended event to announce it and show its progress. Widened
+// from id+title once the UI started surfacing arcs — the description is what
+// tells the player what they've been pulled into, and duration_days is what
+// makes it worth investing in rather than treating as a one-off.
+export interface ArcSummary {
+  id: string;
+  title: string;
+  description: string;
+  duration_days: number;
+}
+
 export interface DayPlan {
   day: number;
   schedule: ScheduleSegment[];
   segments: ResolvedSegment[];
-  startedArc: { id: string; title: string } | null;
-  activeArc: { event: { id: string; title: string }; startDay: number } | null;
+  startedArc: ArcSummary | null;
+  activeArc: { event: ArcSummary; startDay: number } | null;
 }
 
 export interface EndDayResult {
