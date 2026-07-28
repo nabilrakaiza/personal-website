@@ -1,5 +1,34 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment
+
+Copy the keys below into `.env.local`:
+
+| Variable | Used by | Notes |
+|---|---|---|
+| `RESEND_API_KEY` | `/api/contact` | Contact form delivery |
+| `CONTACT_EMAIL` | `/api/contact` | Where contact submissions go |
+| `SOCIALSIM_API_URL` | `/api/socialsim/[...path]` | Base URL of the [socialsim-rag](https://github.com/nabilrakaiza/socialsim-rag) deployment |
+
+## Playground: socialsim
+
+`/playground/socialsim` is a RAG-powered dating sim. The UI lives here; the game engine, the Supabase database and the Gemini calls all live in a **separate** project, reached through the `/api/socialsim/[...path]` proxy. That split is deliberate — `SERVICE_ROLE` (which bypasses row-level security) and `GOOGLE_API_KEY` stay in that project and never enter this one's environment.
+
+Two things about that route worth knowing before editing it:
+
+- It **must pipe the upstream response body through untouched**. End-of-day streams progress over several minutes; awaiting `res.json()` would buffer it into one silent wait.
+- Its `maxDuration` matches upstream's 300s, because it holds the connection open for the whole run. 300s is Vercel Hobby's hard maximum, not a chosen value.
+
+To run both locally:
+
+```bash
+# terminal 1 — the game engine
+cd ../socialsim-rag && npm run dev        # :3000
+
+# terminal 2 — this site
+PORT=3001 npm run dev                     # :3001, with SOCIALSIM_API_URL=http://localhost:3000
+```
+
 ## Getting Started
 
 First, run the development server:
