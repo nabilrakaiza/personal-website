@@ -277,6 +277,7 @@ export default function Page() {
         {backLink}
         <EndingScreen
           endingId={state.ending_id}
+          sessionId={state.session_id}
           onRestart={() => {
             localStorage.removeItem(SESSION_KEY);
             setSessionId(null);
