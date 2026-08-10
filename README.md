@@ -1,23 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# personal-website
+
+Portfolio site — Next.js App Router, TypeScript, deployed on Vercel.
+
+Most of it is static: about, projects, contact. The interesting part is `/playground`, which hosts things that actually run in the browser rather than linking out to a repo.
+
+```bash
+npm run dev        # :3000
+npm run build
+npm run lint
+```
 
 ## Environment
 
-Copy the keys below into `.env.local`:
+Copy into `.env.local`:
 
 | Variable | Used by | Notes |
 |---|---|---|
 | `RESEND_API_KEY` | `/api/contact` | Contact form delivery |
 | `CONTACT_EMAIL` | `/api/contact` | Where contact submissions go |
-| `SOCIALSIM_API_URL` | `/api/socialsim/[...path]` | Base URL of the [socialsim-rag](https://github.com/nabilrakaiza/socialsim-rag) deployment |
+| `SOCIALSIM_API_URL` | `/api/socialsim/[...path]` | Base URL of the [socialsim-rag](https://github.com/nabilrakaiza/socialsim-rag) deployment, no trailing slash |
 
-## Playground: socialsim
+## Playground
 
-`/playground/socialsim` is a RAG-powered dating sim. The UI lives here; the game engine, the Supabase database and the Gemini calls all live in a **separate** project, reached through the `/api/socialsim/[...path]` proxy. That split is deliberate — `SERVICE_ROLE` (which bypasses row-level security) and `GOOGLE_API_KEY` stay in that project and never enter this one's environment.
+| Page | What it is |
+|---|---|
+| `/playground/socialsim` | RAG-powered dating sim — see below |
+| `/playground/id-en-translator` | Indonesian↔English translation model |
+| `/playground/fairy-chess-machine` | Minimax + alpha-beta over fairy chess |
 
-Two things about that route worth knowing before editing it:
+### socialsim
 
-- It **must pipe the upstream response body through untouched**. End-of-day streams progress over several minutes; awaiting `res.json()` would buffer it into one silent wait.
-- Its `maxDuration` matches upstream's 300s, because it holds the connection open for the whole run. 300s is Vercel Hobby's hard maximum, not a chosen value.
+The UI lives here; the game engine, the Supabase database and the Gemini calls all live in a **separate project**, reached through the `/api/socialsim/[...path]` proxy. That split is deliberate — `SERVICE_ROLE` (which bypasses row-level security) and `GOOGLE_API_KEY` stay over there and never enter this project's environment.
+
+Three things to know before editing anything in that path:
+
+- **The proxy must pipe the upstream response body through untouched.** End-of-day streams progress over several minutes; `await res.json()` would buffer it into one silent wait and destroy the progress reporting.
+- **`maxDuration` matches upstream's 300s**, because this route holds the connection open for the whole run. 300s is Vercel Hobby's hard maximum, not a chosen value.
+- **This project keeps its own copies** of the socialsim page and components — only `lib/` is remote. They have to be kept in sync by hand, and letting them drift is what once left the playground's chat broken: the engine made `inGameHour` a required field and this copy carried on not sending it. When the engine's API changes, check here.
+
+Deploy order matters for the same reason: **engine first, then this site.** A push here triggers a Vercel build immediately, so shipping a playground that calls a route the live engine doesn't have yet breaks it until the engine catches up.
 
 To run both locally:
 
@@ -26,40 +47,5 @@ To run both locally:
 cd ../socialsim-rag && npm run dev        # :3000
 
 # terminal 2 — this site
-PORT=3001 npm run dev                     # :3001, with SOCIALSIM_API_URL=http://localhost:3000
+npm run dev -- -p 3001                    # with SOCIALSIM_API_URL=http://localhost:3000
 ```
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

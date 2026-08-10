@@ -7,7 +7,7 @@ import { RiExternalLinkLine, RiGithubLine } from 'react-icons/ri';
 const projects = [
   { title: 'Indo-English Translation Machine', description: 'A mini Indonesian-English translation machine built from scratch.', tags: ['Python', 'PyTorch', 'Transformer', 'BPE Tokenizer', 'NLP', 'AI'], github: 'https://github.com/nabilrakaiza/id-en-translator', live: '/playground/id-en-translator', accent: '#ff6b6b'},
   { title: 'Papper', description: 'Built a cross-platform, multi-role React Native POS system with Supabase and PostgreSQL that automates stock deduction, dual-printer Bluetooth printing, and analytics, actively processing 50+ daily orders and reducing SaaS costs by 100%.', tags: ['React', 'React Native', 'TypeScript', 'PostgreSQL', 'Supabase', 'Expo', 'Tailwind CSS'], github: 'https://github.com/nabilrakaiza/Papper', accent: '#7b61ff' },
-  { title: 'Monitoring Human Mobility with Smartphones', description: 'Utilizing several traditional and modern ML framework to solve this problem.', tags: ['Python', 'sklearn', 'Pandas', 'PyTorch', 'Machine Learning'], github: 'https://github.com/NbF5/CS3244-repo', accent: '#00d4ff'},
+  { title: 'social-sim-rag', description: 'A narrative dating sim where no dialogue is scripted — each character answers from her own retrieved memory, chunked and embedded into pgvector. Hybrid retrieval and a hand-labelled eval harness took MRR from 0.47 to 0.86.', tags: ['TypeScript', 'Next.js', 'RAG', 'pgvector', 'Supabase', 'Gemini'], github: 'https://github.com/nabilrakaiza/socialsim-rag', live: '/playground/socialsim', accent: '#ff6b6b' },
 ];
 
 export default function Projects() {
