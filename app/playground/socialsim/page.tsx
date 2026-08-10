@@ -23,6 +23,16 @@ import { ArcStatus } from './components/ArcStatus';
 
 const SESSION_KEY = 'socialsim-session-id';
 
+// Only free segments are chattable, so this covers every case a message can be
+// sent from. Phrased as something she'd say she was doing, since it reaches the
+// prompt as "She is in the middle of: ...". Module scope, not component scope:
+// send() is memoised, and a fresh object each render would rebuild it.
+const CHAT_ACTIVITY: Record<string, string | undefined> = {
+  get_ready: 'getting ready for the day',
+  lunch: 'lunch',
+  dinner: 'dinner',
+};
+
 // Semantic stage ids come from lib/; the wording is the UI's business.
 const STAGE_COPY: Record<EndDayStage, string> = {
   scoring: 'weighing what you did today…',
@@ -105,10 +115,17 @@ export default function Page() {
     }
   };
 
+  // End of day is minutes of LLM work and is NOT idempotent — a second run
+  // scores the same day again, writing duplicate knowledge chunks and a second
+  // diary entry. A ref rather than state because two calls in the same tick
+  // would both read the same stale state value and both proceed.
+  const endingDay = useRef(false);
+
   const finishDay = useCallback(
     () =>
       guard(async () => {
-        if (!sessionId) return;
+        if (!sessionId || endingDay.current) return;
+        endingDay.current = true;
         setEndProgress(STAGE_COPY.scoring);
         try {
           const result = await streamEndDay(sessionId, (stage) => setEndProgress(STAGE_COPY[stage]));
@@ -116,6 +133,7 @@ export default function Page() {
           setState(await api<GameState>(`/api/socialsim/session/${sessionId}`));
         } finally {
           setEndProgress(null);
+          endingDay.current = false;
         }
       }),
     [sessionId]
@@ -128,6 +146,9 @@ export default function Page() {
   // times a second — adding the clock to its deps would rebuild the callback,
   // and re-render the chat, on every tick. A ref carries the live time instead,
   // written in an effect because mutating a ref during render is disallowed.
+  // Same reasoning: the name is a stable string, the segment object is not.
+  const segmentName = clock.segment?.name;
+
   const clockRef = useRef(clock.inGameHour);
   useEffect(() => {
     clockRef.current = clock.inGameHour;
@@ -203,6 +224,12 @@ export default function Page() {
           day: state.current_day,
           relationshipStage: state.relationship_stage as RelationshipStage,
           playerMessage: text,
+          // The live clock only exists here — useDayClock is client state and
+          // isn't persisted — so nothing server-side can work out what time it
+          // is unless this sends it. inGameHour is a REQUIRED field on the
+          // chat route; without it every message fails.
+          inGameHour: clockRef.current,
+          activity: CHAT_ACTIVITY[segmentName ?? ''],
         });
         // Stamped with the reply's own arrival time, not the question's — a
         // reply lands 12-15s later, which is minutes of in-game time.
@@ -221,7 +248,7 @@ export default function Page() {
         });
       }
     }),
-    [state, character, sessionId]
+    [state, character, sessionId, segmentName]
   );
 
   const answerEvent = useCallback(
