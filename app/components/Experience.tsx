@@ -4,17 +4,25 @@ import ScrollReveal from './ScrollReveal';
 
 const experiences = [
   {
-    role: 'Data Analyst and Automation Intern',
+    role: 'Teaching Assistant (CS2040 - Data Structures and Algorithms)',
+    company: 'NUS Computing',
+    period: 'Aug 2026 - Present',
+    location: 'Singapore',
+    description: 'Mentored 10+ students weekly in Java-based data structures and algorithms, providing hands-on debugging support and assignment guidance.',
+    tags: ['Java', 'DSA', 'Teaching'],
+  },
+  {
+    role: 'Distribution Operations Intern',
     company: 'Singlife',
     period: 'May - Aug 2026',
     location: 'Singapore',
-    description: 'Built 10+ Qlik dashboards and Python automation scripts that eliminated 50+ hours of monthly manual effort, while leveraging Power Automate to further streamline reporting workflows.',
+    description: 'Developed 5+ Qlik dashboards (20+ sheets) and Python automation scripts to streamline monthly reporting, decreasing report runtime by 80% and accelerating new-partner onboarding by 95%.',
     tags: ['Qlik', 'Python', 'Power Automate'],
   },
   {
     role: 'Teaching Assistant (CS2030 - Object Oriented Programming)',
     company: 'NUS Computing',
-    period: 'Jan 2026 - Present',
+    period: 'Jan 2026 - May 2026',
     location: 'Singapore',
     description: 'Mentored 20+ students weekly in Java OOP and functional programming while debugging codebases and guiding project milestones, achieving over 75% positive feedback for emphasizing clean architecture and modularity.',
     tags: ['Java', 'OOP', 'Teaching'],

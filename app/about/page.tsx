@@ -60,7 +60,7 @@ export default function AboutPage() {
                 Aside from these, I also enjoy playing some games, watching YouTube/anime, listening to music, playing Rubiks cube, or just sleeping.
               </p>
 
-              <a href="/resume.pdf" download="Nabil_Rakaiza_Abror_Resume.pdf" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              <a href="/Resume - Nabil Rakaiza Abror - General Role.pdf" download="Resume - Nabil Rakaiza Abror - General Role.pdf" style={{ textDecoration: 'none', display: 'inline-block' }}>
                 <button className="font-mono" style={{
                   display: 'flex', alignItems: 'center', gap: '0.5rem',
                   padding: '0.75rem 1.5rem', background: 'transparent',

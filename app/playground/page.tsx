@@ -25,7 +25,7 @@ const playgroundItems = [
     title: 'social-sim-rag',
     description: 'A dating sim where nobody is scripted. Characters remember only what they personally witnessed, stored and retrieved from a vector database.',
     tags: ['RAG', 'pgvector', 'Gemini', 'Supabase', 'TypeScript', 'AI'],
-    accent: '#7b61ff',
+    accent: '#ff6b6b',
   }
 ];
 
