@@ -62,7 +62,7 @@ export default function Contact() {
           </div>
 
           {/* Resume download */}
-          <a href="/resume.pdf" download="Nabil_Rakaiza_Abror_Resume.pdf" style={{ textDecoration: 'none', display: 'inline-block' }}>
+          <a href="/Resume - Nabil Rakaiza Abror - General Role.pdf" download="Resume - Nabil Rakaiza Abror - General Role.pdf" style={{ textDecoration: 'none', display: 'inline-block' }}>
             <button className="font-mono" style={{
               display: 'flex', alignItems: 'center', gap: '0.5rem',
               padding: '0.75rem 1.5rem',

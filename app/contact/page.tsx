@@ -62,7 +62,7 @@ export default function ContactPage() {
               ))}
             </div>
 
-            <a href="/resume.pdf" download="Nabil_Rakaiza_Abror_Resume.pdf" style={{ textDecoration: 'none', display: 'block' }}>
+            <a href="/Resume - Nabil Rakaiza Abror - General Role.pdf" download="Resume - Nabil Rakaiza Abror - General Role.pdf" style={{ textDecoration: 'none', display: 'block' }}>
               <button className="font-mono" style={{
                 display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%',
                 justifyContent: 'center', padding: '0.8rem 1.5rem',
