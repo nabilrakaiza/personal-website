@@ -47,7 +47,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section style={{ padding: '2rem 2rem 6rem', maxWidth: '1100px', margin: '0 auto' }}>
+    <section className="gutter" style={{ padding: '2rem 2rem 6rem', maxWidth: '1100px', margin: '0 auto' }}>
       <ScrollReveal>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
           <span className="font-mono" style={{ color: 'var(--accent-mint)', fontSize: '0.8rem', letterSpacing: '0.12em' }}>04</span>
@@ -67,7 +67,7 @@ export default function Experience() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
           {experiences.map((exp, i) => (
-            <ScrollReveal key={exp.company} delay={i * 0.1} direction="left">
+            <ScrollReveal key={exp.role} delay={i * 0.1} direction="left">
               <div style={{ position: 'relative' }}>
                 {/* Timeline dot */}
                 <div style={{

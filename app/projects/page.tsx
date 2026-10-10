@@ -30,7 +30,7 @@ export default function ProjectsPage() {
 
   return (
     <div style={{ paddingTop: '64px', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem' }}>
+      <div className="gutter" style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem' }}>
         <ScrollReveal>
           <span className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--accent-mint)', letterSpacing: '0.12em', display: 'block', marginBottom: '0.75rem' }}>
             // projects
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
           </div>
         </ScrollReveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))', gap: '1.25rem' }}>
           {filtered.map((project, i) => (
             <motion.div
               key={project.title}

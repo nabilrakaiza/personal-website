@@ -47,9 +47,9 @@ export default function Hero() {
 
   return (
     <section
-      className="grid-bg"
+      className="grid-bg gutter"
       style={{
-        minHeight: '100vh',
+        minHeight: '100svh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -90,7 +90,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.7 }}
           className="font-mono text-glow-mint"
-          style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.03em', marginBottom: '1rem', lineHeight: 1.1 }}
+          style={{ fontSize: 'clamp(2rem, 6vw, 4.5rem)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.03em', marginBottom: '1rem', lineHeight: 1.1 }}
         >
           Nabil Rakaiza Abror
         </motion.h1>

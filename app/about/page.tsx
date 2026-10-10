@@ -2,28 +2,13 @@
 'use client';
 
 import ScrollReveal from '../components/ScrollReveal';
-import { SiTypescript, SiJavascript, SiCplusplus, SiPostgresql, SiPython, SiPytorch, SiTensorflow, SiLangchain, SiGit } from 'react-icons/si';
-import { FaJava } from 'react-icons/fa';
 import { RiDownloadLine } from 'react-icons/ri';
 import Image from 'next/image';
-
-const skills = [
-  { label: 'Python', icon: <SiPython size={16} />, level: 97 },
-  { label: 'Java', icon: <FaJava size={16} />, level: 90 },
-  { label: 'JavaScript', icon: <SiJavascript size={16} />, level: 80 },
-  { label: 'TypeScript', icon: <SiTypescript size={16} />, level: 85 },
-  { label: 'C++', icon: <SiCplusplus size={16} />, level: 75 },
-  { label: 'SQL / PostgreSQL', icon: <SiPostgresql size={16} />, level: 92 },
-  { label: 'PyTorch', icon: <SiPytorch size={16} />, level: 90 },
-  { label: 'TensorFlow', icon: <SiTensorflow size={16} />, level: 85 },
-  { label: 'LangChain', icon: <SiLangchain size={16} />, level: 85 },
-  { label: 'Git / GitHub', icon: <SiGit size={16} />, level: 90 },
-];
 
 export default function AboutPage() {
   return (
     <div style={{ paddingTop: '64px', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem' }}>
+      <div className="gutter" style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem' }}>
         <ScrollReveal>
           <span className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--accent-mint)', letterSpacing: '0.12em', display: 'block', marginBottom: '0.75rem' }}>
             // about
@@ -33,7 +18,7 @@ export default function AboutPage() {
           </h1>
         </ScrollReveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem' }}>
+        <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.5fr) minmax(0, 1fr)', gap: '4rem', alignItems: 'start' }}>
           <div>
             <ScrollReveal direction="left">
               {/* Avatar placeholder */}
@@ -79,49 +64,21 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <ScrollReveal direction="right">
-              <h3 className="font-mono" style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '2rem', letterSpacing: '0.05em' }}>
-                skills &amp; proficiency
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                {skills.map((skill, i) => (
-                  <ScrollReveal key={skill.label} delay={i * 0.05} direction="right">
-                    <div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)' }}>
-                          {skill.icon}
-                          <span className="font-mono" style={{ fontSize: '0.8rem', letterSpacing: '0.04em' }}>{skill.label}</span>
-                        </div>
-                        <span className="font-mono" style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>{skill.level}%</span>
-                      </div>
-                      <div style={{ background: 'var(--bg-surface)', borderRadius: '2px', height: '4px', overflow: 'hidden' }}>
-                        <div style={{
-                          height: '100%', borderRadius: '2px',
-                          background: `linear-gradient(to right, var(--accent-mint), var(--accent-violet))`,
-                          width: `${skill.level}%`,
-                          transition: 'width 1s ease',
-                        }} />
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </ScrollReveal>
-
             {/* Quick facts */}
-            <ScrollReveal delay={0.4} direction="right">
-              <div style={{ marginTop: '3rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '10px', padding: '1.5rem' }}>
+            <ScrollReveal direction="right">
+              <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '10px', padding: '1.5rem' }}>
                 <h3 className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', letterSpacing: '0.1em', marginBottom: '1.25rem', textTransform: 'uppercase' }}>Quick Facts</h3>
                 {[
                   ['📍', 'Based in', 'Singapore'],
                   ['💼', 'Experience', '3+ years'],
                   ['🌐', 'Languages', 'English, Indonesian'],
                   ['🎮', 'Games', 'Valorant, CR, COC, ML'],
-                  ['💡', 'Hobby', 'YT/anime, football, games'],
+                  ['💡', 'Hobby', 'YT/anime, football, games, sleep'],
+                  ['⭐', 'Fav Team', 'Paper Rex, Bayern Munich'],
                 ].map(([emoji, key, val]) => (
-                  <div key={key} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid var(--border)' }}>
+                  <div key={key} style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', padding: '0.5rem 0', borderBottom: '1px solid var(--border)' }}>
                     <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{emoji} {key}</span>
-                    <span className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--text-primary)' }}>{val}</span>
+                    <span className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--text-primary)', textAlign: 'right' }}>{val}</span>
                   </div>
                 ))}
               </div>
@@ -132,7 +89,7 @@ export default function AboutPage() {
 
       <style>{`
         @media (max-width: 768px) {
-          div > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
         }
       `}</style>
     </div>

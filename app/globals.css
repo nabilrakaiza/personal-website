@@ -114,6 +114,18 @@ body::before {
   background-size: 40px 40px;
 }
 
+/* Phone gutters. Sections set their padding inline, hence !important. */
+@media (max-width: 640px) {
+  .gutter {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  /* Home page sections: tighter vertical rhythm than desktop's 6rem. */
+  main > section.gutter {
+    padding-bottom: 4rem !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

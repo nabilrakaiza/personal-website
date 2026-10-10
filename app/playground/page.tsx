@@ -32,7 +32,7 @@ const playgroundItems = [
 export default function PlaygroundPage() {
   return (
     <div style={{ paddingTop: '64px', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem' }}>
+      <div className="gutter" style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem' }}>
         <ScrollReveal>
           <span className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--accent-violet)', letterSpacing: '0.12em', display: 'block', marginBottom: '0.75rem' }}>
             // playground
@@ -45,7 +45,7 @@ export default function PlaygroundPage() {
           </p>
         </ScrollReveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))', gap: '1.25rem' }}>
           {playgroundItems.map((item, i) => (
             <ScrollReveal key={item.slug} delay={i * 0.08}>
               <Link href={`/playground/${item.slug}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>

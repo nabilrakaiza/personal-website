@@ -23,7 +23,7 @@ const highlights = [
 
 export default function AboutShort() {
   return (
-    <section style={{ padding: '6rem 2rem', maxWidth: '1100px', margin: '0 auto' }}>
+    <section className="gutter" style={{ padding: '6rem 2rem', maxWidth: '1100px', margin: '0 auto' }}>
       <ScrollReveal>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
           <span className="font-mono" style={{ color: 'var(--accent-mint)', fontSize: '0.8rem', letterSpacing: '0.12em' }}>01</span>
@@ -34,7 +34,7 @@ export default function AboutShort() {
         </div>
       </ScrollReveal>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+      <div className="about-short-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
         <ScrollReveal direction="left">
           <p style={{ fontSize: '1rem', color: 'var(--text-muted)', lineHeight: 1.85, marginBottom: '1.25rem' }}>
             Hi, I&apos;m Nabil. I&apos;m a Data Science and Computer Science student at the National University of Singapore. 
@@ -77,7 +77,7 @@ export default function AboutShort() {
 
       <style>{`
         @media (max-width: 768px) {
-          section > div:last-child { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .about-short-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
         }
       `}</style>
     </section>
