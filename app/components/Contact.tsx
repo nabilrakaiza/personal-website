@@ -13,7 +13,7 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section style={{ padding: '2rem 2rem 8rem', maxWidth: '1100px', margin: '0 auto' }}>
+    <section className="gutter" style={{ padding: '2rem 2rem 8rem', maxWidth: '1100px', margin: '0 auto' }}>
       <ScrollReveal>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
           <span className="font-mono" style={{ color: 'var(--accent-mint)', fontSize: '0.8rem', letterSpacing: '0.12em' }}>05</span>
@@ -24,7 +24,7 @@ export default function Contact() {
         </div>
       </ScrollReveal>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+      <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
         <ScrollReveal direction="left">
           <h3 style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.3 }}>
             Let&apos;s build something <span style={{ color: 'var(--accent-mint)' }}>great</span> together.
@@ -103,7 +103,7 @@ export default function Contact() {
 
       <style>{`
         @media (max-width: 768px) {
-          section > div:last-child { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .contact-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
         }
         input::placeholder, textarea::placeholder { color: var(--text-muted); }
       `}</style>

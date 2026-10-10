@@ -27,6 +27,7 @@ export default function Navbar() {
 
   return (
     <motion.header
+      className="gutter"
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -36,9 +37,9 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 1000,
-        borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
-        backgroundColor: scrolled ? 'rgba(10,10,15,0.92)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+        borderBottom: scrolled || menuOpen ? '1px solid var(--border)' : '1px solid transparent',
+        backgroundColor: scrolled || menuOpen ? 'rgba(10,10,15,0.92)' : 'transparent',
+        backdropFilter: scrolled || menuOpen ? 'blur(12px)' : 'none',
         transition: 'all 0.3s ease',
         padding: '0 2rem',
       }}
@@ -106,7 +107,9 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="mobile-menu-btn"
-          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-primary)', fontSize: '1.5rem', display: 'none' }}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-primary)', fontSize: '1.5rem', display: 'none', padding: '0.5rem', marginRight: '-0.5rem', lineHeight: 0 }}
         >
           {menuOpen ? <RiCloseLine /> : <RiMenuLine />}
         </button>
@@ -119,6 +122,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            className="mobile-menu"
             style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border)', padding: '1rem 2rem' }}
           >
             {navLinks.map((link) => (
@@ -136,6 +140,11 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+        }
+        /* full-bleed: cancel the header's side padding */
+        .mobile-menu { margin: 0 -2rem; }
+        @media (max-width: 640px) {
+          .mobile-menu { margin: 0 -1.25rem; padding: 1rem 1.25rem !important; }
         }
       `}</style>
     </motion.header>

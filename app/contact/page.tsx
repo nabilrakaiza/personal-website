@@ -15,7 +15,7 @@ const socials = [
 export default function ContactPage() {
   return (
     <div style={{ paddingTop: '64px', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '4rem 2rem' }}>
+      <div className="gutter" style={{ maxWidth: '900px', margin: '0 auto', padding: '4rem 2rem' }}>
         <ScrollReveal>
           <span className="font-mono" style={{ fontSize: '0.8rem', color: 'var(--accent-mint)', letterSpacing: '0.12em', display: 'block', marginBottom: '0.75rem' }}>
             // contact
@@ -28,7 +28,7 @@ export default function ContactPage() {
           </p>
         </ScrollReveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '4rem' }}>
+        <div className="contact-page-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '4rem' }}>
           {/* Left: socials + resume */}
           <ScrollReveal direction="left">
             <h3 className="font-mono" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
@@ -98,7 +98,7 @@ export default function ContactPage() {
 
       <style>{`
         @media (max-width: 768px) {
-          div > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .contact-page-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
         }
         input::placeholder, textarea::placeholder { color: var(--text-muted); }
       `}</style>

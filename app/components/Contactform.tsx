@@ -65,6 +65,7 @@ export default function ContactForm({ showSubject = false }: ContactFormProps) {
             placeholder={field.placeholder}
             value={form[field.name as keyof typeof form]}
             onChange={handleChange}
+            className="contact-input"
             style={inputStyle}
             onFocus={e => (e.currentTarget.style.borderColor = 'var(--accent-mint)')}
             onBlur={e => (e.currentTarget.style.borderColor = 'var(--border)')}
@@ -80,6 +81,7 @@ export default function ContactForm({ showSubject = false }: ContactFormProps) {
           rows={showSubject ? 5 : 4}
           value={form.message}
           onChange={handleChange}
+          className="contact-input"
           style={{ ...inputStyle, resize: 'vertical' }}
           onFocus={e => (e.currentTarget.style.borderColor = 'var(--accent-mint)')}
           onBlur={e => (e.currentTarget.style.borderColor = 'var(--border)')}
@@ -115,7 +117,11 @@ export default function ContactForm({ showSubject = false }: ContactFormProps) {
         {status === 'loading' ? 'Sending...' : 'Send Message →'}
       </button>
 
-      <style>{`input::placeholder, textarea::placeholder { color: var(--text-muted); }`}</style>
+      <style>{`
+        input::placeholder, textarea::placeholder { color: var(--text-muted); }
+        /* iOS Safari zooms the page when a focused field is under 16px */
+        @media (max-width: 768px) { .contact-input { font-size: 16px !important; } }
+      `}</style>
     </div>
   );
 }

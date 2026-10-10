@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer style={{
+    <footer className="gutter" style={{
       borderTop: '1px solid var(--border)',
       padding: '2rem',
       textAlign: 'center',

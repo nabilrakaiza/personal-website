@@ -12,7 +12,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section style={{ padding: '2rem 2rem 6rem', maxWidth: '1100px', margin: '0 auto' }}>
+    <section className="gutter" style={{ padding: '2rem 2rem 6rem', maxWidth: '1100px', margin: '0 auto' }}>
       <ScrollReveal>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.75rem' }}>
           <span className="font-mono" style={{ color: 'var(--accent-mint)', fontSize: '0.8rem', letterSpacing: '0.12em' }}>03</span>
@@ -26,7 +26,7 @@ export default function Projects() {
         </p>
       </ScrollReveal>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))', gap: '1.25rem' }}>
         {projects.map((project, i) => (
           <ScrollReveal key={project.title} delay={i * 0.1}>
             <div
