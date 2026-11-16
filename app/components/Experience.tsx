@@ -4,6 +4,14 @@ import ScrollReveal from './ScrollReveal';
 
 const experiences = [
   {
+    role: 'Workshop Executive',
+    company: 'NUS Statistics and Data Science Society',
+    period: 'Aug 2026 - Present',
+    location: 'Singapore',
+    description: 'Conducted hands-on AI/ML and Natural Language Processing (NLP) workshops for over 20 students.',
+    tags: ['LLM', 'AI/ML', 'NLP', 'RAG', 'Teaching'],
+  },
+  {
     role: 'Teaching Assistant (CS2040 - Data Structures and Algorithms)',
     company: 'NUS Computing',
     period: 'Aug 2026 - Present',
