@@ -30,7 +30,7 @@ export default function Contact() {
             Let&apos;s build something <span style={{ color: 'var(--accent-mint)' }}>great</span> together.
           </h3>
           <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
-            I&apos;m currently open to new opportunities — whether it&apos;s a full-time role, freelance project, or an interesting collaboration. Drop me a message and I&apos;ll get back to you within 24 hours.
+            I&apos;m currently looking for an internship starting July 2027, especially in ML, NLP or AI engineering. I&apos;m also happy to chat about projects and collaborations. Drop me a message and I&apos;ll get back to you within 24 hours.
           </p>
 
           {/* Socials */}

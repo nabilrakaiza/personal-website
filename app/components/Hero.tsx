@@ -80,7 +80,7 @@ export default function Hero() {
         >
           <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-mint)', display: 'inline-block', boxShadow: '0 0 8px var(--accent-mint)', animation: 'pulse 2s infinite' }} />
           <span className="font-mono" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', letterSpacing: '0.1em'}}>
-            Available for opportunities
+            Open to July 2027 internships
           </span>
         </motion.div>
 
