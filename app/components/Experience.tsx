@@ -4,6 +4,14 @@ import ScrollReveal from './ScrollReveal';
 
 const experiences = [
   {
+    role: '[Upcoming] Operations Automation Engineer Intern',
+    company: 'ShopBack',
+    period: 'Jan 2027 - June 2027',
+    location: 'Singapore',
+    description: 'Not yet started, so will leave it empty for now',
+    tags: ['Python', 'Generative AI', 'Automation'],
+  },
+  {
     role: 'Workshop Executive',
     company: 'NUS Statistics and Data Science Society',
     period: 'Aug 2026 - Present',
