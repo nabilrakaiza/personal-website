@@ -115,7 +115,7 @@ export default function Hero() {
           transition={{ delay: 0.8 }}
           style={{ fontSize: '1.05rem', color: 'var(--text-muted)', lineHeight: 1.75, maxWidth: '560px', margin: '0 auto 2.5rem' }}
         >
-          Backed by a background in Data Science and Computer Science, I focus on AI/ML and core software engineering. 
+          Backed by a background in Data Science and Computer Science, I focus on AI/ML and NLP. 
           I thrive on untangling complex problems and turning them into seamless, well-architected solutions.
         </motion.p>
 

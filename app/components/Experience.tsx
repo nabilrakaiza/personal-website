@@ -8,7 +8,7 @@ const experiences = [
     company: 'ShopBack',
     period: 'Jan 2027 - June 2027',
     location: 'Singapore',
-    description: 'Not yet started, so will leave it empty for now',
+    description: 'Starting in January 2027.',
     tags: ['Python', 'Generative AI', 'Automation'],
   },
   {
@@ -24,7 +24,7 @@ const experiences = [
     company: 'NUS Computing',
     period: 'Aug 2026 - Present',
     location: 'Singapore',
-    description: 'Mentored 10+ students weekly in Java-based data structures and algorithms, providing hands-on debugging support and assignment guidance.',
+    description: 'Mentoring 14 students weekly in Java-based data structures and algorithms, providing hands-on debugging support and assignment guidance.',
     tags: ['Java', 'DSA', 'Teaching'],
   },
   {
